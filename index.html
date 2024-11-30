@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Un jour amusant en Gatineau - Airbnb Studio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        header {
+            text-align: center;
+            background-color: #2a2a2a;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .listing-details, .amenities, .photos, .neighborhood {
+            margin-bottom: 40px;
+        }
+        .photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .neighborhood {
+            background-color: #eeeeee;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .icon-list {
+            display: flex;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
+        /* Card-like Banner styling */
+        .card-banner {
+            background-color: #f1f1f1;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Studio « Un jour amusant en Gatineau »</h1>
+        <p>Gatineau, Québec</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Neighborhood - Moved to the top -->
+        <section class="neighborhood">
+            <h2><i class="fas fa-map-marker-alt"></i> Le Quartier</h2>
+            <p>Le studio est situé dans un quartier calme et agréable de Gatineau, à proximité des commerces, des restaurants, et des attractions locales. Parfait pour une escapade tranquille ou un week-end exploratoire.</p>
+        </section>
+
+        <!-- Banner Card - Introduction -->
+        <div class="card-banner">
+            <div class="d-flex justify-content-between">
+                <h3>Bienvenue au Studio</h3>
+                <i class="fas fa-bed"></i>
+            </div>
+            <p>Un studio parfait pour une escapade intime à Gatineau. Profitez de la tranquillité du quartier tout en étant proche des attractions locales.</p>
+        </div>
+
+        <!-- Listing Details Card -->
+        <div class="card-banner">
+            <h4><i class="fas fa-bed"></i> Détails du logement</h4>
+            <ul class="list-unstyled">
+                <li><strong>Capacité :</strong> 2 personnes</li>
+                <li><strong>Chambres :</strong> 1 chambre</li>
+                <li><strong>Lit :</strong> 1 lit</li>
+                <li><strong>Salle de bains :</strong> 1 salle de bains</li>
+            </ul>
+        </div>
+
+        <!-- Amenities Card -->
+        <div class="card-banner">
+            <h4><i class="fas fa-cogs"></i> Équipements</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-wifi"></i> Wifi</li>
+                <li><i class="fas fa-tv"></i> Télévision</li>
+                <li><i class="fas fa-snowflake"></i> Climatisation</li>
+                <li><i class="fas fa-thermometer-half"></i> Chauffage</li>
+                <li><i class="fas fa-microwave"></i> Four à micro-ondes</li>
+                <li><i class="fas fa-refrigerator"></i> Mini réfrigérateur</li>
+            </ul>
+        </div>
+
+        <!-- Differentiators Card -->
+        <div class="card-banner">
+            <h4><i class="fas fa-star"></i> Différentielles</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-key"></i> Arrivée autonome</li>
+                <li><i class="fas fa-car"></i> Garage pour deux véhicules</li>
+            </ul>
+        </div>
+
+        <!-- Photos - Masonry Grid -->
+        <section class="photos">
+            <h2><i class="fas fa-images"></i> Photos du Studio</h2>
+            
+            <!-- Salle à manger (1 photo) -->
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Salle+à+manger" alt="Salle à manger">
+                <p>Salle à manger</p>
+            </div>
+
+            <!-- Chambre (3 photos) -->
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Chambre+1" alt="Chambre 1">
+                <p>Chambre</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Chambre+2" alt="Chambre 2">
+                <p>Chambre</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Chambre+3" alt="Chambre 3">
+                <p>Chambre</p>
+            </div>
+
+            <!-- Salle de bains (2 photos) -->
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Salle+de+baigne+1" alt="Salle de bain 1">
+                <p>Salle de bain</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Salle+de+baigne+2" alt="Salle de bain 2">
+                <p>Salle de bain</p>
+            </div>
+
+            <!-- Extérieur (2 photos) -->
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Extérieur+1" alt="Extérieur 1">
+                <p>Extérieur</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Extérieur+2" alt="Extérieur 2">
+                <p>Extérieur</p>
+            </div>
+
+            <!-- Quartier (4 photos) -->
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Quartier+1" alt="Quartier 1">
+                <p>Quartier</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Quartier+2" alt="Quartier 2">
+                <p>Quartier</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Quartier+3" alt="Quartier 3">
+                <p>Quartier</p>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/600x400?text=Quartier+4" alt="Quartier 4">
+                <p>Quartier</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap 5 JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
