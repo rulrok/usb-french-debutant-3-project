@@ -14,53 +14,86 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
         }
+
         header {
-            text-align: center;
-            background-color: #2a2a2a;
+            background-color: #5c6bc0;
             color: white;
-            padding: 20px 0;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid #2c387e;
         }
-        h1 {
-            font-size: 2.5em;
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
         }
-        .listing-details, .amenities, .photos, .neighborhood {
-            margin-bottom: 40px;
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
         }
+
+        .section-title {
+            font-size: 2em;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #3c4a84;
+        }
+
+        .card-banner {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
         .photo {
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
         .photo img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
+
         .photos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
         }
-        .neighborhood {
-            background-color: #eeeeee;
-            padding: 20px;
-            border-radius: 8px;
+
+        .card.card-cover {
+            background-size: cover;
+            background-position: center;
         }
-        .icon-list {
-            display: flex;
-            gap: 10px;
-            font-size: 1.5rem;
+
+        .google-map {
+            margin-top: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
-        /* Card-like Banner styling */
-        .card-banner {
-            background-color: #f1f1f1;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 30px;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
         }
     </style>
 </head>
@@ -73,116 +106,113 @@
 
     <div class="container">
 
-        <!-- Neighborhood - Moved to the top -->
-        <section class="neighborhood">
-            <h2><i class="fas fa-map-marker-alt"></i> Le Quartier</h2>
-            <p>Le studio est situé dans un quartier calme et agréable de Gatineau, à proximité des commerces, des restaurants, et des attractions locales. Parfait pour une escapade tranquille ou un week-end exploratoire.</p>
+        <!-- Neighborhood Section -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Le Quartier</h2>
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://rulrok.github.io/usb-french-debutant-3-project/img/quartier%20(1).webp');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Un quartier calme et charmant</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                            <small>Gatineau, Québec</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- Banner Card - Introduction -->
-        <div class="card-banner">
-            <div class="d-flex justify-content-between">
-                <h3>Bienvenue au Studio</h3>
-                <i class="fas fa-bed"></i>
+        <!-- Studio Details Section -->
+        <section>
+            <div class="card-banner">
+                <h4>Bienvenue au Studio</h4>
+                <p>Un studio parfait pour une escapade intime à Gatineau. Profitez de la tranquillité du quartier tout en étant proche des attractions locales.</p>
             </div>
-            <p>Un studio parfait pour une escapade intime à Gatineau. Profitez de la tranquillité du quartier tout en étant proche des attractions locales.</p>
-        </div>
 
-        <!-- Listing Details Card -->
-        <div class="card-banner">
-            <h4><i class="fas fa-bed"></i> Détails du logement</h4>
-            <ul class="list-unstyled">
-                <li><strong>Capacité :</strong> 2 personnes</li>
-                <li><strong>Chambres :</strong> 1 chambre</li>
-                <li><strong>Lit :</strong> 1 lit</li>
-                <li><strong>Salle de bains :</strong> 1 salle de bains</li>
-            </ul>
-        </div>
+            <!-- Listing Details Section -->
+            <div class="card-banner">
+                <h4><i class="fas fa-bed"></i> Détails du logement</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Capacité :</strong> 2 personnes</li>
+                    <li><strong>Chambres :</strong> 1 chambre</li>
+                    <li><strong>Lit :</strong> 1 lit</li>
+                    <li><strong>Salle de bains :</strong> 1 salle de bains</li>
+                </ul>
+            </div>
 
-        <!-- Amenities Card -->
-        <div class="card-banner">
-            <h4><i class="fas fa-cogs"></i> Équipements</h4>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-wifi"></i> Wifi</li>
-                <li><i class="fas fa-tv"></i> Télévision</li>
-                <li><i class="fas fa-snowflake"></i> Climatisation</li>
-                <li><i class="fas fa-thermometer-half"></i> Chauffage</li>
-                <li><i class="fas fa-microwave"></i> Four à micro-ondes</li>
-                <li><i class="fas fa-refrigerator"></i> Mini réfrigérateur</li>
-            </ul>
-        </div>
+            <!-- Amenities Section -->
+            <div class="card-banner">
+                <h4><i class="fas fa-cogs"></i> Équipements</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-wifi"></i> Wifi</li>
+                    <li><i class="fas fa-tv"></i> Télévision</li>
+                    <li><i class="fas fa-snowflake"></i> Climatisation</li>
+                    <li><i class="fas fa-thermometer-half"></i> Chauffage</li>
+                    <li><i class="fas fa-microwave"></i> Four à micro-ondes</li>
+                    <li><i class="fas fa-refrigerator"></i> Mini réfrigérateur</li>
+                </ul>
+            </div>
 
-        <!-- Differentiators Card -->
-        <div class="card-banner">
-            <h4><i class="fas fa-star"></i> Différentielles</h4>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-key"></i> Arrivée autonome</li>
-                <li><i class="fas fa-car"></i> Garage pour deux véhicules</li>
-            </ul>
-        </div>
+            <!-- Differentiators Section -->
+            <div class="card-banner">
+                <h4><i class="fas fa-star"></i> Différentielles</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-key"></i> Arrivée autonome</li>
+                    <li><i class="fas fa-car"></i> Garage pour deux véhicules</li>
+                </ul>
+            </div>
+        </section>
 
-        <!-- Photos - Masonry Grid -->
-        <section class="photos">
-            <h2><i class="fas fa-images"></i> Photos du Studio</h2>
-            
+        <!-- Photos Section -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-images"></i> Photos du Studio</h2>
+
             <!-- Salle à manger (1 photo) -->
             <div class="photo">
-                <img src="img/salle.webp" alt="Salle à manger">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/salle.webp" alt="Salle à manger">
                 <p>Salle à manger</p>
             </div>
 
             <!-- Chambre (3 photos) -->
             <div class="photo">
-                <img src="img/chambre (1).webp" alt="Chambre 1">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(1).webp" alt="Chambre 1">
                 <p>Chambre</p>
             </div>
             <div class="photo">
-                <img src="img/chambre (2).webp" alt="Chambre 2">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(2).webp" alt="Chambre 2">
                 <p>Chambre</p>
             </div>
             <div class="photo">
-                <img src="img/chambre (3).webp" alt="Chambre 3">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(3).webp" alt="Chambre 3">
                 <p>Chambre</p>
             </div>
 
             <!-- Salle de bains (2 photos) -->
             <div class="photo">
-                <img src="img/bains (1).webp" alt="Salle de bain 1">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/bains%20(1).webp" alt="Salle de bain 1">
                 <p>Salle de bain</p>
             </div>
             <div class="photo">
-                <img src="img/bains (2).webp" alt="Salle de bain 2">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/bains%20(2).webp" alt="Salle de bain 2">
                 <p>Salle de bain</p>
             </div>
 
             <!-- Extérieur (2 photos) -->
             <div class="photo">
-                <img src="img/exterieur (1).webp" alt="Extérieur 1">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/exterieur%20(1).webp" alt="Extérieur 1">
                 <p>Extérieur</p>
             </div>
             <div class="photo">
-                <img src="img/exterieur (2).webp" alt="Extérieur 2">
+                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/exterieur%20(2).webp" alt="Extérieur 2">
                 <p>Extérieur</p>
-            </div>
-
-            <!-- Quartier (4 photos) -->
-            <div class="photo">
-                <img src="img/quartier (1).webp" alt="Quartier 1">
-                <p>Quartier</p>
-            </div>
-            <div class="photo">
-                <img src="img/quartier (2).webp" alt="Quartier 2">
-                <p>Quartier</p>
-            </div>
-            <div class="photo">
-                <img src="img/quartier (3).webp" alt="Quartier 3">
-                <p>Quartier</p>
-            </div>
-            <div class="photo">
-                <img src="img/quartier (4).webp" alt="Quartier 4">
-                <p>Quartier</p>
             </div>
         </section>
+
+        <!-- Google Maps Embed -->
+        <div class="google-map">
+            <h3 class="section-title"><i class="fas fa-map"></i> Localisation sur Google Maps</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179021.7402547353!2d-75.7917322759049!3d45.48562127045186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce1a7e0babee53%3A0x7cedf5701a140956!2sGatineau%2C%20Quebec!5e0!3m2!1spt-BR!2sca!4v1732948029690!5m2!1spt-BR!2sca" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
     </div>
 
