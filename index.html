@@ -1,223 +1,885 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Un jour amusant en Gatineau - Airbnb Studio</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Un jour amusant en Gatineau</title>
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-        header {
-            background-color: #5c6bc0;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 5px solid #2c387e;
-        }
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-        header h1 {
-            font-size: 3em;
-            font-weight: bold;
-        }
+    <!-- =======================================================
+  * Template Name: MyPortfolio
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Updated: Aug 08 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Un jour amusant en Gatineau</h1>
+        </a>
 
-        .section-title {
-            font-size: 2em;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #3c4a84;
-        }
-
-        .card-banner {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .photo {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .photo:hover {
-            transform: scale(1.05);
-        }
-
-        .photo img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .photos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .card.card-cover {
-            background-size: cover;
-            background-position: center;
-        }
-
-        .google-map {
-            margin-top: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Studio « Un jour amusant en Gatineau »</h1>
-        <p>Gatineau, Québec</p>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#portfolio" class="active">Portfolio</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
     </header>
 
-    <div class="container">
+    <main class="main">
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <div class="row align-items-center">
+              <div class="col-lg-7 portfolio-info">
+                <h3>Vuelez-vous depanser un très __ jour pour une pris __?</h3>
+                <p>Vous avez jusque trouvé le lieu parfait!</p>
+              </div>
+              <div class="col-lg-5 text-center text-lg-end">
+                <ul
+                  class="portfolio-filters isotope-filters"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <li data-filter="*" class="filter-active">Tous</li>
+                  <li data-filter=".filter-salle-manger">Salle à manger</li>
+                  <li data-filter=".filter-chambre-coucher">
+                    Chambre à coucher
+                  </li>
+                  <li data-filter=".filter-salle-baigne">Salle de baigne</li>
+                  <li data-filter=".filter-exteriuer">Extériuer</li>
+                  <li data-filter=".filter-quartier">Quartier</li>
+                </ul>
+                <!-- End Portfolio Filters -->
+              </div>
+            </div>
 
-        <!-- Neighborhood Section -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Le Quartier</h2>
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://rulrok.github.io/usb-french-debutant-3-project/img/quartier%20(1).webp');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Un quartier calme et charmant</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                            <small>Gatineau, Québec</small>
-                        </li>
-                    </ul>
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              style="position: relative; height: 1344px"
+            >
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-salle-manger"
+                style="position: absolute; left: 0px; top: 0px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/salle_manger.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Salle à manger</h4>
+                    <p>Profitez de votre repas tout en regardant notre télévision exclusive</p>
+                    <div>
+                      <a
+                        href="img/salle_manger.webp"
+                        title="Profitez de votre repas tout en regardant notre télévision exclusive"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </div>
+              <!-- End Portfolio Item -->
 
-        <!-- Studio Details Section -->
-        <section>
-            <div class="card-banner">
-                <h4>Bienvenue au Studio</h4>
-                <p>Un studio parfait pour une escapade intime à Gatineau. Profitez de la tranquillité du quartier tout en étant proche des attractions locales.</p>
-            </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-salle-manger"
+                style="position: absolute; left: 440px; top: 0px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/salle_manger_2.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Salle à manger</h4>
+                    <p>Profitez de la vue magnifique de votre lit tout en prenant le petit déjeuner</p>
+                    <div>
+                      <a
+                        href="img/salle_manger_2.webp"
+                        title="Profitez de la vue magnifique de votre lit tout en prenant le petit déjeuner"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Listing Details Section -->
-            <div class="card-banner">
-                <h4><i class="fas fa-bed"></i> Détails du logement</h4>
-                <ul class="list-unstyled">
-                    <li><strong>Capacité :</strong> 2 personnes</li>
-                    <li><strong>Chambres :</strong> 1 chambre</li>
-                    <li><strong>Lit :</strong> 1 lit</li>
-                    <li><strong>Salle de bains :</strong> 1 salle de bains</li>
-                </ul>
-            </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chambre-coucher"
+                style="position: absolute; left: 880px; top: 0px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/chambre_1.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Chambre à coucher</h4>
+                    <p>Notre lit est super confortable et est déjà équipé d'oreillers!</p>
+                    <div>
+                      <a
+                        href="img/chambre_1.webp"
+                        title="Notre lit est super confortable et est déjà équipé d'oreillers!"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Amenities Section -->
-            <div class="card-banner">
-                <h4><i class="fas fa-cogs"></i> Équipements</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-wifi"></i> Wifi</li>
-                    <li><i class="fas fa-tv"></i> Télévision</li>
-                    <li><i class="fas fa-snowflake"></i> Climatisation</li>
-                    <li><i class="fas fa-thermometer-half"></i> Chauffage</li>
-                    <li><i class="fas fa-microwave"></i> Four à micro-ondes</li>
-                    <li><i class="fas fa-refrigerator"></i> Mini réfrigérateur</li>
-                </ul>
-            </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-chambre-coucher"
+                style="position: absolute; left: 0px; top: 336px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/chambre_2.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Chambre à coucher</h4>
+                    <p>Profitez de notre ensemble de lampes de lecture pour une nuit inoubliable</p>
+                    <div>
+                      <a
+                        href="img/chambre_2.webp"
+                        title="Profitez de notre ensemble de lampes de lecture pour une nuit inoubliable"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Differentiators Section -->
-            <div class="card-banner">
-                <h4><i class="fas fa-star"></i> Différentielles</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-key"></i> Arrivée autonome</li>
-                    <li><i class="fas fa-car"></i> Garage pour deux véhicules</li>
-                </ul>
-            </div>
-        </section>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-salle-baigne"
+                style="position: absolute; left: 440px; top: 336px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/bains_1.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Salle de baigne</h4>
+                    <p>Quand il faut y aller, il faut y aller. Pourquoi ne pas en profiter au moins?</p>
+                    <div>
+                      <a
+                        href="img/bains_1.webp"
+                        title="Quand il faut y aller, il faut y aller. Pourquoi ne pas en profiter au moins?"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-        <!-- Photos Section -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-images"></i> Photos du Studio</h2>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-salle-baigne"
+                style="position: absolute; left: 880px; top: 336px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/bains_2.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Salle de baigne</h4>
+                    <p>Prenez une bonne douche tout en pouvant voir qui est autour</p>
+                    <div>
+                      <a
+                        href="img/bains_2.webp"
+                        title="Prenez une bonne douche tout en pouvant voir qui est autour"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Salle à manger (1 photo) -->
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/salle.webp" alt="Salle à manger">
-                <p>Salle à manger</p>
-            </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-exteriuer"
+                style="position: absolute; left: 0px; top: 672px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/exterieur_1.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Extériuer</h4>
+                    <p>Avec notre service en libre-service, vous pouvez arriver et entrer votre code PIN</p>
+                    <div>
+                      <a
+                        href="img/exterieur_1.webp"
+                        title="Avec notre service en libre-service, vous pouvez arriver et entrer votre code PIN"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Chambre (3 photos) -->
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(1).webp" alt="Chambre 1">
-                <p>Chambre</p>
+              <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-exteriuer"
+              style="position: absolute; left: 440px; top: 672px"
+            >
+              <div class="portfolio-content h-100">
+                <img src="img/exterieur_2.webp" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4>Extériuer</h4>
+                  <p>Notre photographe a eu quelques problèmes, mais croyez-moi. C'est magnifique!</p>
+                  <div>
+                    <a
+                      href="img/exterieur_2.webp"
+                      title="Notre photographe a eu quelques problèmes, mais croyez-moi. C'est magnifique!"
+                      data-gallery="portfolio-gallery-all"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(2).webp" alt="Chambre 2">
-                <p>Chambre</p>
-            </div>
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/chambre%20(3).webp" alt="Chambre 3">
-                <p>Chambre</p>
-            </div>
+            <!-- End Portfolio Item -->
 
-            <!-- Salle de bains (2 photos) -->
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/bains%20(1).webp" alt="Salle de bain 1">
-                <p>Salle de bain</p>
-            </div>
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/bains%20(2).webp" alt="Salle de bain 2">
-                <p>Salle de bain</p>
-            </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quartier"
+                style="position: absolute; left: 440px; top: 672px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/quartier_1.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Quartier</h4>
+                    <p>Découvrez à quel point notre ville est incroyable et authentique!</p>
+                    <div>
+                      <a
+                        href="img/quartier_1.webp"
+                        title="Découvrez à quel point notre ville est incroyable et authentique!"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-            <!-- Extérieur (2 photos) -->
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/exterieur%20(1).webp" alt="Extérieur 1">
-                <p>Extérieur</p>
-            </div>
-            <div class="photo">
-                <img src="https://rulrok.github.io/usb-french-debutant-3-project/img/exterieur%20(2).webp" alt="Extérieur 2">
-                <p>Extérieur</p>
-            </div>
-        </section>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quartier"
+                style="position: absolute; left: 880px; top: 672px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/quartier_2.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Quartier</h4>
+                    <p>Découvrez à quel point notre ville est incroyable et authentique!</p>
+                    <div>
+                      <a
+                        href="img/quartier_2.webp"
+                        title="Découvrez à quel point notre ville est incroyable et authentique!"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
 
-        <!-- Google Maps Embed -->
-        <div class="google-map">
-            <h3 class="section-title"><i class="fas fa-map"></i> Localisation sur Google Maps</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179021.7402547353!2d-75.7917322759049!3d45.48562127045186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce1a7e0babee53%3A0x7cedf5701a140956!2sGatineau%2C%20Quebec!5e0!3m2!1spt-BR!2sca!4v1732948029690!5m2!1spt-BR!2sca" allowfullscreen="" loading="lazy"></iframe>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quartier"
+                style="position: absolute; left: 440px; top: 1008px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/quartier_3.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Quartier</h4>
+                    <p>Découvrez à quel point notre ville est incroyable et authentique!</p>
+                    <div>
+                      <a
+                        href="img/quartier_3.webp"
+                        title="Découvrez à quel point notre ville est incroyable et authentique!"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quartier"
+                style="position: absolute; left: 0px; top: 1008px"
+              >
+                <div class="portfolio-content h-100">
+                  <img src="img/quartier_4.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Quartier</h4>
+                    <p>Découvrez à quel point notre ville est incroyable et authentique!</p>
+                    <div>
+                      <a
+                        href="img/quartier_4.webp"
+                        title="Découvrez à quel point notre ville est incroyable et authentique!"
+                        data-gallery="portfolio-gallery-all"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
         </div>
+      </section>
+      <!-- /Portfolio Section -->
 
-    </div>
+      <!-- Clients Section -->
+      <section id="clients" class="clients section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>My Clients</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <!-- End Section Title -->
 
-    <!-- Bootstrap 5 JS and Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-</body>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="img/salle_manger.webp"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="img/salle_manger_2.webp"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="img/chambre_1.webp"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="img/chambre_2.webp"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-5.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-6.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-7.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-8.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /Clients Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <h3>Nesciunt Mete</h3>
+                <p>
+                  Provident nihil minus qui consequatur non omnis maiores. Eos
+                  accusantium minus dolores iure perferendis tempore et
+                  consequatur.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <h3>Eosle Commodi</h3>
+                <p>
+                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
+                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <h3>Ledo Markt</h3>
+                <p>
+                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
+                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <h3>Asperiores Commodit</h3>
+                <p>
+                  Non et temporibus minus omnis sed dolor esse consequatur.
+                  Cupiditate sed error ea fuga sit provident adipisci neque.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+                <h3>Velit Doloremque</h3>
+                <p>
+                  Cumque et suscipit saepe. Est maiores autem enim facilis ut
+                  aut ipsam corporis aut. Sed animi at autem alias eius labore.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                <h3>Dolori Architecto</h3>
+                <p>
+                  Hic molestias ea quibusdam eos. Fugiat enim doloremque aut
+                  neque non et debitis iure. Corrupti recusandae ducimus enim.
+                </p>
+                <a href="service-details.html" class="readmore stretched-link"
+                  >Read more <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Testimonials</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-1.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Proin iaculis purus consequat sem cure digni ssim donec
+                      porttitora entum suscipit rhoncus. Accusantium quam,
+                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                      risus at semper.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-2.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Export tempor illum tamen malis malis eram quae irure
+                      esse labore quem cillum quid cillum eram malis quorum
+                      velit fore eram velit sunt aliqua noster fugiat irure amet
+                      legam anim culpa.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-3.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Enim nisi quem export duis labore cillum quae magna enim
+                      sint quorum nulla quem veniam duis minim tempor labore
+                      quem eram duis noster aute amet eram fore quis sint
+                      minim.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-4.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Fugiat enim eram quae cillum dolore dolor amet nulla
+                      culpa multos export minim fugiat minim velit minim dolor
+                      enim duis veniam ipsum anim magna sunt elit fore quem
+                      dolore labore illum veniam.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-5.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Quis quorum aliqua sint quem legam fore sunt eram irure
+                      aliqua veniam tempor noster veniam enim culpa labore duis
+                      sunt culpa nulla illum cillum fugiat legam esse veniam
+                      culpa fore nisi cillum quid.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /Testimonials Section -->
+    </main>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">MyPortfolio</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
