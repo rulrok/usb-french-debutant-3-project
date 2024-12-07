@@ -65,56 +65,141 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Base price per day in CAD
+        var basePrice = 100.0;
 
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Base price per day in CAD
-  var basePrice = 100.00;
+        // Function to update the price based on the number of days
+        function updatePrice() {
+          var days = parseInt(document.getElementById("daysInput").value);
+          var price = basePrice * days;
+          var discount = 0; // Initialize discount variable
 
-  // Function to update the price based on the number of days
-  function updatePrice() {
-    var days = parseInt(document.getElementById('daysInput').value);
-    var price = basePrice * days;
-    var discount = 0;  // Initialize discount variable
+          // Update #priceTotal
+          document.getElementById(
+            "priceTotal"
+          ).textContent = `CA$${basePrice.toFixed(
+            2
+          )} x ${days} = CA$${price.toFixed(2)}`;
 
-    // Update #priceTotal
-    document.getElementById('priceTotal').textContent = `CA$${basePrice.toFixed(2)} x ${days} = CA$${price.toFixed(2)}`;
+          // Promo code input handling
+          var promoCode = document
+            .getElementById("promoCode")
+            .value.trim()
+            .toUpperCase();
 
-    // Apply discount if promo code is "USB"
-    var promoCode = document.getElementById('promoCode').value.toUpperCase();
-    if (promoCode === 'USB') {
-      discount = basePrice * 0.1 * days; // Calculate 10% discount on total
-      price -= discount; // Apply discount to total price
-    }
+          // Check if promo code is valid
+          if (promoCode === "USB") {
+            discount = basePrice * 0.1 * days; // Calculate 10% discount on total
+            price -= discount; // Apply discount to total price
 
-    // Update discount amount and total price
-    document.getElementById('discountAmount').textContent = `CA$${discount.toFixed(2)} off`; // Show discount
-    document.getElementById('priceWithDiscount').textContent = `CA$${price.toFixed(2)}`; // Show final price with discount or without
-  }
+            // Hide invalid coupon message
+            document.getElementById("invalidCouponMessage").style.display =
+              "none";
+          } else if (promoCode !== "") {
+            // If promo code is invalid, show the error message
+            document.getElementById("invalidCouponMessage").style.display =
+              "block";
+            discount = 0; // No discount for invalid promo code
+          } else {
+            // No promo code entered, hide error message
+            document.getElementById("invalidCouponMessage").style.display =
+              "none";
+          }
 
-  // Update price when the number of days changes
-  document.getElementById('daysInput').addEventListener('input', updatePrice);
+          // Update discount amount and total price
+          document.getElementById(
+            "discountAmount"
+          ).textContent = `CA$${discount.toFixed(2)} off`; // Show discount
+          document.getElementById(
+            "priceWithDiscount"
+          ).textContent = `CA$${price.toFixed(2)}`; // Show final price with discount or without
+        }
 
-  // Handle the promo code input
-  document.getElementById('applyPromo').addEventListener('click', updatePrice);
+        // Update price when the number of days changes
+        document
+          .getElementById("daysInput")
+          .addEventListener("input", updatePrice);
 
-  // External buttons to increase and decrease days
-  document.getElementById('increaseDays').addEventListener('click', function () {
-    var daysInput = document.getElementById('daysInput');
-    daysInput.value = parseInt(daysInput.value) + 1;
-    updatePrice();
-  });
+        // Handle the promo code input (apply the promo when the button is clicked)
+        document
+          .getElementById("applyPromo")
+          .addEventListener("click", updatePrice);
 
-  document.getElementById('decreaseDays').addEventListener('click', function () {
-    var daysInput = document.getElementById('daysInput');
-    if (daysInput.value > 1) {
-      daysInput.value = parseInt(daysInput.value) - 1;
-      updatePrice();
-    }
-  });
-});
+        // External buttons to increase and decrease days
+        document
+          .getElementById("increaseDays")
+          .addEventListener("click", function () {
+            var daysInput = document.getElementById("daysInput");
+            daysInput.value = parseInt(daysInput.value) + 1;
+            updatePrice();
+          });
 
-  </script>
+        document
+          .getElementById("decreaseDays")
+          .addEventListener("click", function () {
+            var daysInput = document.getElementById("daysInput");
+            if (daysInput.value > 1) {
+              daysInput.value = parseInt(daysInput.value) - 1;
+              updatePrice();
+            }
+          });
+
+        // Clear Promo Code input when clear button is clicked
+        document
+          .getElementById("clearPromo")
+          .addEventListener("click", function () {
+            document.getElementById("promoCode").value = ""; // Clear input
+            document.getElementById("invalidCouponMessage").style.display =
+              "none"; // Hide error message
+            updatePrice(); // Recalculate price after clearing
+          });
+
+        // Fake loading overlay when Pay button is clicked
+        document
+          .getElementById("payButton")
+          .addEventListener("click", function () {
+            // Show the loading overlay
+            var overlay = document.getElementById("loadingOverlay");
+            overlay.style.visibility = "visible"; // Make the overlay visible
+            overlay.style.opacity = 1; // Fade in effect
+
+            // Hide the modal
+            var modal = bootstrap.Modal.getInstance(
+              document.getElementById("reservationModal")
+            );
+            modal.hide(); // This hides the modal
+
+            // Simulate a delay (e.g., 3 seconds) before hiding the overlay
+            setTimeout(function () {
+              overlay.style.opacity = 0; // Fade out effect
+              setTimeout(function () {
+                overlay.style.visibility = "hidden"; // Hide the overlay after the fade-out effect
+              }, 300); // Wait for the fade-out to finish
+              alert("Payment Successful!"); // You can replace this with an actual payment flow
+            }, 3000); // 3 seconds
+          });
+      });
+    </script>
+
+    <style>
+      /* Loading Overlay Styles */
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden; /* Start hidden */
+        opacity: 0; /* Start fully transparent */
+        transition: visibility 0s 0.3s, opacity 0.3s ease; /* Transition for visibility and opacity */
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -164,53 +249,103 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="reservationModalLabel">Reservation</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="reservationModal"
+          tabindex="-1"
+          aria-labelledby="reservationModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">
+                  Reservation
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Days Input with External Buttons -->
+                <div class="input-group mb-3">
+                  <button class="btn btn-dark btn-lg" id="decreaseDays">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="daysInput"
+                    class="form-control text-center"
+                    min="1"
+                    value="1"
+                    style="width: 60%"
+                  />
+                  <button class="btn btn-dark btn-lg" id="increaseDays">
+                    +
+                  </button>
+                </div>
+
+                <!-- Promo Code Input -->
+                <div class="input-group mb-3">
+                  <!-- Clear Button (left side) and Apply Button (right side) -->
+                  <input
+                    type="text"
+                    id="promoCode"
+                    class="form-control"
+                    placeholder="Enter promo code"
+                  />
+                  <button id="clearPromo" class="btn btn-secondary">
+                    Clear
+                  </button>
+                  <button id="applyPromo" class="btn btn-primary">Apply</button>
+                </div>
+
+                <!-- Invalid Coupon Message -->
+                <span
+                  id="invalidCouponMessage"
+                  style="display: none; color: red"
+                  >Coupon invalide</span
+                >
+
+                <!-- Price Information -->
+                <div id="totalPrice" class="mt-3 text-uppercase">
+                  <span>Sub-total:</span>
+                  <div id="priceTotal" class="price text-end">
+                    CA$100.00 x 1 = CA$100.00
+                  </div>
+
+                  <span>Discount:</span>
+                  <div id="discountAmount" class="text-success text-end">
+                    CA$0.00 off
+                  </div>
+
+                  <span class="display-4">Total:</span>
+                  <div id="priceWithDiscount" class="price text-end">
+                    CA$100.00
+                  </div>
+                </div>
+
+                <!-- Pay Button -->
+                <div class="d-flex justify-content-end mt-4">
+                  <button class="btn btn-primary btn-lg w-100" id="payButton">
+                    Pay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-          <!-- Days Input with External Buttons -->
-          <div class="input-group mb-3">
-            <button class="btn btn-secondary" id="decreaseDays">-</button>
-            <input type="number" id="daysInput" class="form-control text-center" min="1" value="0" style="width: 60%;">
-            <button class="btn btn-secondary" id="increaseDays">+</button>
-          </div>
 
-          <!-- Promo Code Input -->
-          <div class="d-flex align-items-center mt-3">
-            <input type="text" id="promoCode" class="form-control promo-input" placeholder="Enter promo code">
-            <button class="btn btn-secondary ms-2" id="applyPromo">Apply</button>
-          </div>
-
-          <div id="totalPrice" class="mt-3 text-uppercase">
-            <!-- Total Price Display -->
-            <span>Sub-total:
-              <div id="priceTotal" class="price text-end">CA$100.00 x 1 = CA$100.00</div>
-            </span>
-          
-            <!-- Discount Amount -->
-            <span>Discount:
-              <div id="discountAmount" class="text-success text-end">CA$0.00 off</div>
-            </span>
-          
-            <!-- Discounted Price -->
-            <span class="display-4">Total:
-              <div id="priceWithDiscount" class="price text-end">CA$100.00</div>
-            </span>
-          </div>          
-
-          <!-- Pay Button -->
-          <div class="d-flex justify-content-end mt-4">
-            <button class="btn btn-primary" id="payButton">Pay</button>
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay" style="z-index: 9999">
+          <div class="spinner-border text-white" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
         <div class="container">
           <div
